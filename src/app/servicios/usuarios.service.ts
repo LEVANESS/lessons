@@ -16,6 +16,6 @@ export class UsuariosService {
     return this.usuarios;
   }
   getUsuario(id: number){
-    return this.getUsuarios().find(predicate usuario => usuario.id === id);
+    return this.getUsuarios().find(usuario => usuario.id === id);
   }
 }
