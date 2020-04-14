@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosService } from '../servicios/usuarios.service';
 
 @Component({
   selector: 'app-usuario',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usuario.component.scss']
 })
 export class UsuarioComponent implements OnInit {
-
-  constructor() { }
+  usuarios: any[];
+  constructor(private usuariosService: UsuariosService) { }
 
   ngOnInit(): void {
+this.usuarios = this.usuariosService.getUsuarios();
+
   }
 
 }
